@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Web de Fútbol</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema Web de Fútbol</h1>
+    </header>
+    <nav>
+        <a href="#" id="inicio">Inicio</a>
+        <a href="#" id="equipos">Equipos</a>
+        <a href="#" id="partidos">Partidos</a>
+        <a href="#" id="contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Bienvenido al sistema de gestión de fútbol</h2>
+            <p>Consulta partidos, equipos y estadísticas en tiempo real.</p>
+            <button id="verMas">Ver más</button>
+        </div>
+        <div id="contenidoFutbol" class="hidden">
+            <h3>Historia del Fútbol</h3>
+            <p>El fútbol es uno de los deportes más populares del mundo. Surgió en el siglo XIX en Inglaterra y se ha convertido en una pasión global.</p>
+            <h3>Grandes Equipos</h3>
+            <p>Algunos de los equipos más exitosos incluyen el Real Madrid, Barcelona, Manchester United, y Bayern Múnich.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Sistema de Fútbol. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("inicio").addEventListener("click", function() {
+                window.location.href = "inicio.html";
+            });
+
+            document.getElementById("equipos").addEventListener("click", function() {
+                window.location.href = "equipos.html";
+            });
+
+            document.getElementById("partidos").addEventListener("click", function() {
+                window.location.href = "partidos.html";
+            });
+
+            document.getElementById("contacto").addEventListener("click", function() {
+                window.location.href = "contacto.html";
+            });
+
+            document.getElementById("verMas").addEventListener("click", function() {
+                document.getElementById("contenidoFutbol").classList.toggle("hidden");
+            });
+        });
+    </script>
+    <style>
+        .hidden { display: none; }
+    </style>
+</body>
+</html>
